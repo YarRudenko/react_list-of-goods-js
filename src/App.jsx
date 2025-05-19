@@ -36,7 +36,7 @@ export const App = () => {
   };
 
   const handleSort = method => {
-    setSortBy(method);
+    setSortBy(current => (current === method ? null : method));
   };
 
   const handleReverse = () => {
